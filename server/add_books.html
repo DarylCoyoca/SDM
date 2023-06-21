@@ -1,0 +1,104 @@
+
+<html>
+  <head>
+  <style>
+  body{
+	  background-image: url('image/library1.jpg');
+	  background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .add_books {
+  background-color: grey;
+  opacity: 2;
+  margin: auto;
+  width: 400px;
+  height: 580px;
+  border-radius: 3px;
+}
+h1 {
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+
+h4 {
+  text-align: center;
+  color: white;
+}
+
+form{
+  width: 400px;
+  margin-left: 20px;
+}
+
+form label{
+  color: white;
+  display: flex;
+  margin-top: 20px;
+  font-size: 20px;
+   opacity: 2;
+}
+
+form input {
+  width: 347px;
+  padding: 10px;
+  border: none;
+  border: 2px solid gray;
+  border-radius: 6px;
+  outline: none;
+}
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px;
+  margin: 20px 0;
+  border: none;
+  border: 2px solid grey;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 347px;
+}
+button:hover {
+  opacity: 0.8;
+}
+.cancelbtn{
+	width: 70px;
+	background-color: darkred;
+	list-style: none;
+	color: white;
+	margin: 8px 0;
+}
+.cancelbtn a{
+	list-style: none;
+	color: white;
+}
+  </style>
+  </head>
+  <body>
+    <div class="add_books">
+      <h1>Add books</h1>
+	  
+	 <form action="add_books.php" method="post">
+	  <div class="container">
+	  
+		<label for="title"><b>Title</b></label>
+		<input type="text" placeholder="Enter book title" name="title" required>
+		
+		<label for="author"><b>Author</b></label>
+		<input type="text" placeholder="Enter book author" name="author" required>
+		
+		<label for="publisher"><b>Copyright</b></label>
+		<input type="text" placeholder="Enter book copyright" name="publisher" required>
+		
+		<label for="date_published"><b>Number of books</b></label>
+		<input type="number" placeholder="Enter number of books" name="date_published" required>
+		
+		<button type="submit" class="submit" name="Submit" value="Add">Add</button>
+		<button type="button" class="cancelbtn"><a href="home.html">Cancel</a></button>
+		
+	  </div>
+	</form>
+ 
+    </div>
+  </body>
+</html>

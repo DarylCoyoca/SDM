@@ -1,0 +1,114 @@
+<html>
+  <head>
+	<meta charset="utf-8">
+	<title>OC E-Library</title>
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.navbar{
+	display: flex;
+	height: 80px;
+	justify-content: center;
+	align-items: center;
+	background-color: maroon;
+	position: sticky;
+	top: 0;
+}
+.navbar .logo{
+	color: white;
+	font-size: 2rem;
+	position: margin-left;
+}
+.navbar .logo span{
+	color: blue;
+}
+.navbar ul {
+	list-style: none;
+	display: flex;
+}
+.navbar ul li {
+	padding: 10px 10px;
+	position: relative;
+}
+.navbar ul li a{
+	text-decoration: none;
+	color: white;
+	padding: 8px 5px;
+	transition: all .5s ease;
+}
+.navbar ul li a:hover{
+	background-color: white;
+	color: black;
+	box-shadow: 0 0 10px white;
+}
+/*home section */
+#home{
+	height: 100$;
+}
+.mySlides{
+background-image: cover;
+height: 100%;
+width:100%;
+}
+.main{
+display: flex;
+flex-direction: column;
+align-items: center;
+position: absolute;
+right: 10%;
+left: 10;
+bottom: 40%;
+}
+.headings{
+	font-family: century;
+	font-size: 90px;
+	text-align: center;
+	margin: 40px 0px 0px 0px;
+	color: maroon;
+	
+}
+.main .headings{
+	filter: drop-shadow(8px 8px 4px #ffa500);
+}
+</style>
+  </head>
+  <body>
+   <div class="navbar"> 
+   <div class="logo">OC<span>E-Library.</span></div>
+	  
+	  <ul>
+	  
+		<li><a href="home.html">Home</a></li>
+		<li><a href="index.php">Books</a></li>
+		<li><a href="issued_books.php">Issued Books</a></li>
+		<li><a href="returned_books.php">Returned Books</a></li>
+		<li><a href="add_books.html">Add Books</a></li>
+		<li><a href="users.php">Users</a></li>
+		
+	  </ul>
+	</div>
+<div id="home">
+  <img class="mySlides" src="image/library.jpg" style="width:100vah">
+  <img class="mySlides" src="image/library01.jpg" style="width:100vah">
+  <img class="mySlides" src="image/library02.jpg" style="width:100vah">
+  <img class="mySlides" src="image/library03.jpg" style="width:100vah">
+  <img class="mySlides" src="image/library04.jpg" style="width:100vah">
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000); // Change image every 4 seconds
+}
+</script>
